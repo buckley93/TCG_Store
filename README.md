@@ -126,11 +126,11 @@ cd apps/api
 Success looks like:
 
 ```
-Tomcat started on port 8081
+Tomcat started on port 8080
 Started TcgApplication in ... seconds
 ```
 
-Then open Swagger UI: <http://localhost:8081/swagger-ui.html>
+Then open Swagger UI: <http://localhost:8080/swagger-ui.html>
 (It will list no endpoints until controllers exist.)
 
 Stop with **Ctrl+C**.
@@ -153,9 +153,6 @@ spring:
     open-in-view: false
   flyway:
     enabled: true
-
-server:
-  port: 8081
 ```
 
 ### Why these ports
@@ -246,7 +243,6 @@ Rule going forward: never edit an applied migration; add a new one.
 | `Driver class org.postgresql.Driver not found` | IDE hadn't loaded `apps/api/pom.xml` as a Maven project | Reload Maven project / open `apps/api` as the project |
 | `password authentication failed for user "tcg"` | Local Windows Postgres (`postgres.exe`) owned port 5432, so the app never reached the container | Moved container to **5433**, updated URL |
 | `error during connect ... dockerDesktopLinuxEngine` | Docker Desktop wasn't running | Start Docker Desktop, wait for "Engine running", check `docker version` |
-| `Port 8080 was already in use` | Apache (`httpd.exe`) service | Set `server.port: 8081` |
 
 Handy diagnostics:
 
