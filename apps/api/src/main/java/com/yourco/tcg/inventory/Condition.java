@@ -5,4 +5,7 @@ package com.yourco.tcg.inventory;
  * - NM, LP, MP, HP, DMG.
  */
 public enum Condition {
+
+    NM, LP, MP, HP, DMG
+
 }

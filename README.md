@@ -29,10 +29,10 @@ Pokémon TCG e-commerce site: singles, graded slabs, and sealed product.
 
 ### Next
 
-- [ ] `V2__catalog.sql` and `V3__inventory.sql` migrations
-- [ ] Enums: `ProductType`, `Condition`, `Grader`, `InventoryStatus`
-- [ ] Entities: `CardSet`, `Product`, `InventoryItem` + repositories
-- [ ] Seed one single, one slab, one sealed product
+- [x] `V2__catalog.sql` and `V3__inventory.sql` migrations
+- [x] Enums: `ProductType`, `Condition`, `Grader`, `InventoryStatus`
+- [x] Entities: `CardSet`, `Product`, `InventoryItem` + repositories
+- [x] Seed one single, one slab, one sealed product
 - [ ] `GET /products` and `GET /products/{id}`
 - [ ] React app + generated API client + first catalog screen
 - [ ] Then: auth, cart + reservations, checkout + Stripe, admin, mobile
