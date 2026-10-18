@@ -1,0 +1,5 @@
+{
+  "name": "tcg-store",
+  "private": true,
+  "workspaces": ["apps/web", "apps/mobile", "packages/*"]
+}

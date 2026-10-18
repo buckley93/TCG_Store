@@ -1,0 +1,2 @@
+-- TODO: Create tables: card_sets, products (+ indexes, pg_trgm extension for name search)
+-- Never edit this file after it has been applied. Add a new migration instead.

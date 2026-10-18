@@ -1,0 +1,2 @@
+-- TODO: Create tables: inventory_items, stock_reservations (+ index on product_id, status)
+-- Never edit this file after it has been applied. Add a new migration instead.
