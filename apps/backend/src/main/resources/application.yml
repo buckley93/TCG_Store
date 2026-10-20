@@ -1,0 +1,21 @@
+# TODO: Application config
+# - spring.datasource: url, username, password (env vars)
+# - spring.jpa.hibernate.ddl-auto: validate  (schema changes ONLY via Flyway)
+# - spring.security.oauth2.client.registration: google, discord (client ids/secrets from env)
+# - jwt: secret/keys, access token TTL, refresh token TTL
+# - stripe: api key, webhook secret
+# - app.order-retention-days: decide retention window up front
+
+spring:
+  datasource:
+    url: jdbc:postgresql://localhost:5433/tcg
+    username: tcg
+    password: ${POSTGRES_PASSWORD:?POSTGRES_PASSWORD is not set}
+  jpa:
+    hibernate:
+      ddl-auto: validate
+    open-in-view: false
+  flyway:
+    enabled: true
+  config:
+    import: optional:file:../../infra/.env[.properties]

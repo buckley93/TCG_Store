@@ -1,0 +1,2 @@
+-- TODO: Create tables: carts, cart_items, orders, order_items (money as integer cents)
+-- Never edit this file after it has been applied. Add a new migration instead.
