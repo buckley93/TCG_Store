@@ -5,4 +5,5 @@ package com.yourco.tcg.catalog;
  * - SINGLE, SLAB, SEALED.
  */
 public enum ProductType {
+    CARD, SEALED, MERCH
 }

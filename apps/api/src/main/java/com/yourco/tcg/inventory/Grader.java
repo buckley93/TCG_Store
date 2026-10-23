@@ -5,4 +5,7 @@ package com.yourco.tcg.inventory;
  * - PSA, BGS, CGC.
  */
 public enum Grader {
+
+    PSA, BGS, CGC, TAG
+
 }
