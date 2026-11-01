@@ -25,6 +25,7 @@ pnpm-debug.log*
 infra/.env
 application-local.yml
 application-local.properties
+application-local.yaml
 *.pem
 *.key
 

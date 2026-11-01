@@ -7,6 +7,8 @@
 # - app.order-retention-days: decide retention window up front
 
 spring:
+  config:
+    import: optional:file:../../infra/.env[.properties]
   datasource:
     url: jdbc:postgresql://localhost:5433/tcg
     username: tcg
@@ -15,7 +17,6 @@ spring:
     hibernate:
       ddl-auto: validate
     open-in-view: false
-  flyway:
-    enabled: true
-  config:
-    import: optional:file:../../infra/.env[.properties]
+  liquibase:
+    change-log: classpath:db/changelog/db.changelog-master.yaml
+    contexts: prod

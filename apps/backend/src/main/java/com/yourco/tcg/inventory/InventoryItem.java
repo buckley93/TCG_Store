@@ -42,7 +42,7 @@ public class InventoryItem extends BaseEntity {
     @Column(name = "cert_number", length = 50)
     private String certNumber;
 
-    @Column(name = "black_label", nullable = false)
+    @Column(name = "black_label")
     private boolean blackLabel;
 
     @Column(name = "price_cents", nullable = false)

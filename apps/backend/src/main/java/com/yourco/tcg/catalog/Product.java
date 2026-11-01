@@ -27,7 +27,7 @@ import java.util.Map;
 public class Product extends BaseEntity {
 
     @ManyToOne(fetch = FetchType.LAZY)
-    @JoinColumn(name = "set_id", nullable = false)
+    @JoinColumn(name = "set_id")
     private CardSet cardSet;
 
     @Enumerated(EnumType.STRING)
@@ -35,19 +35,19 @@ public class Product extends BaseEntity {
     private ProductType type;
 
     @Enumerated(EnumType.STRING)
-    @Column(name = "subtype", length = 50)
+    @Column(name = "subtype", length = 30, nullable = false)
     private ProductSubType subtype;
 
-    @Column(name = "name", nullable = false, length = 300)
+    @Column(name = "name", nullable = false, length = 200)
     private String name;
 
-    @Column(name = "description", length = 2000)
+    @Column(name = "description", length = 2000, nullable = false)
     private String description;
 
     @Column(name = "card_number", length = 30)
     private String cardNumber;
 
-    @Column(length = 100)
+    @Column(length = 30)
     private String rarity;
 
     @Column(name = "image_url", length = 500)
