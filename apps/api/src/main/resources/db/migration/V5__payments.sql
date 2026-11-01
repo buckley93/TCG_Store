@@ -1,2 +1,0 @@
--- TODO: Create tables: payment_events (unique stripe_event_id)
--- Never edit this file after it has been applied. Add a new migration instead.

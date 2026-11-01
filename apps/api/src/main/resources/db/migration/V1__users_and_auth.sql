@@ -1,2 +1,0 @@
--- TODO: Create tables: users, oauth_identities, refresh_tokens, addresses
--- Never edit this file after it has been applied. Add a new migration instead.
