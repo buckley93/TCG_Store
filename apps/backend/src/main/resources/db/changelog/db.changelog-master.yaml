@@ -1,7 +1,7 @@
 databaseChangeLog:
   - include:
-      file: db/changelog/changes/002-catalog.sql
+      file: db/changelog/scripts/002-catalog.sql
   - include:
-      file: db/changelog/changes/003-inventory.sql
+      file: db/changelog/scripts/003-inventory.sql
   - include:
-      file: db/changelog/changes/900-dev-seed.sql
+      file: db/changelog/scripts/900-dev-seed.sql

@@ -1,6 +1,6 @@
 --liquibase formatted sql
 
---changeset tcg:003-inventory
+--changeset tcg:003-inventory_items-01
 CREATE TABLE inventory_items (
     id BIGSERIAL PRIMARY KEY,
     product_id BIGINT NOT NULL REFERENCES products(id),
@@ -25,10 +25,10 @@ CREATE TABLE inventory_items (
     )
 );
 
+--changeset tcg:003-inventory_items-unique_cert-01
 CREATE UNIQUE INDEX uq_inventory_cert
 on inventory_items(grader, cert_number)
 where cert_number IS NOT NULL;
 
+--changeset tcg:003-inventory_items-product_status-01
 CREATE INDEX idx_inventory_product_status ON inventory_items (product_id, status);
-
---rollback DROP TABLE inventory_items;
